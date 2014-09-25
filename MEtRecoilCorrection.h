@@ -6,8 +6,6 @@
 #include "TLorentzVector.h"
 #include "Math/VectorUtil.h"
 
-typedef ROOT::Math::LorentzVector<ROOT::Math::PxPyPzE4D<double> > LorentzVector;
-
 class MEtRecoilCorrection
 {
  public:
