@@ -24,19 +24,19 @@ class MEtRecoilCorrection
 MEtRecoilCorrection::MEtRecoilCorrection(std::string sampleName_)
 {
   if(sampleName_.find("ZJET") != std::string::npos){
-    corrector_ = new RecoilCorrector("/nfs/dust/cms/user/anayak/CMS/CMSSW_5_3_14_h2tau/src/MyRootMaker/MyRootMaker/data/RecoilCorrector_v7/recoilfits/recoilfit_zmm53XRR_2012_njet.root");
-    corrector_->addMCFile("/nfs/dust/cms/user/anayak/CMS/CMSSW_5_3_14_h2tau/src/MyRootMaker/MyRootMaker/data/RecoilCorrector_v7/recoilfits/recoilfit_zmm53XRR_2012_njet.root");
-    corrector_->addDataFile("/nfs/dust/cms/user/anayak/CMS/CMSSW_5_3_14_h2tau/src/MyRootMaker/MyRootMaker/data/RecoilCorrector_v7/recoilfits/recoilfit_datamm53XRR_2012_njet.root");
+    corrector_ = new RecoilCorrector("/nfs/dust/cms/user/pooja/scratch/plot-macro/RecoilCorrector_v7/recoilfits/recoilfit_zmm53XRR_2012_njet.root");
+    corrector_->addMCFile("/nfs/dust/cms/user/pooja/scratch/plot-macro/RecoilCorrector_v7/recoilfits/recoilfit_zmm53XRR_2012_njet.root");
+    corrector_->addDataFile("/nfs/dust/cms/user/pooja/scratch/plot-macro/RecoilCorrector_v7/recoilfits/recoilfit_datamm53XRR_2012_njet.root");
   }
   else if(sampleName_.find("WJET") != std::string::npos){
-    corrector_ = new RecoilCorrector("/nfs/dust/cms/user/anayak/CMS/CMSSW_5_3_14_h2tau/src/MyRootMaker/MyRootMaker/data/RecoilCorrector_v7/recoilfits/recoilfit_wjets53X_20pv_njet.root");
-    corrector_->addMCFile("/nfs/dust/cms/user/anayak/CMS/CMSSW_5_3_14_h2tau/src/MyRootMaker/MyRootMaker/data/RecoilCorrector_v7/recoilfits/recoilfit_zmm53XRR_2012_njet.root");
-    corrector_->addDataFile("/nfs/dust/cms/user/anayak/CMS/CMSSW_5_3_14_h2tau/src/MyRootMaker/MyRootMaker/data/RecoilCorrector_v7/recoilfits/recoilfit_datamm53XRR_2012_njet.root");
+    corrector_ = new RecoilCorrector("/nfs/dust/cms/user/pooja/scratch/plot-macro/RecoilCorrector_v7/recoilfits/recoilfit_wjets53X_20pv_njet.root");
+    corrector_->addMCFile("/nfs/dust/cms/user/pooja/scratch/plot-macro/RecoilCorrector_v7/recoilfits/recoilfit_zmm53XRR_2012_njet.root");
+    corrector_->addDataFile("/nfs/dust/cms/user/pooja/scratch/plot-macro/RecoilCorrector_v7/recoilfits/recoilfit_datamm53XRR_2012_njet.root");
   }
   else if(sampleName_.find("HIGGS") != std::string::npos){
-    corrector_ = new RecoilCorrector("/nfs/dust/cms/user/anayak/CMS/CMSSW_5_3_14_h2tau/src/MyRootMaker/MyRootMaker/data/RecoilCorrector_v7/recoilfits/recoilfit_higgs53X_20pv_njet.root");
-    corrector_->addMCFile("/nfs/dust/cms/user/anayak/CMS/CMSSW_5_3_14_h2tau/src/MyRootMaker/MyRootMaker/data/RecoilCorrector_v7/recoilfits/recoilfit_zmm53XRR_2012_njet.root");
-    corrector_->addDataFile("/nfs/dust/cms/user/anayak/CMS/CMSSW_5_3_14_h2tau/src/MyRootMaker/MyRootMaker/data/RecoilCorrector_v7/recoilfits/recoilfit_datamm53XRR_2012_njet.root");
+    corrector_ = new RecoilCorrector("/nfs/dust/cms/user/pooja/scratch/plot-macro/RecoilCorrector_v7/recoilfits/recoilfit_higgs53X_20pv_njet.root");
+    corrector_->addMCFile("/nfs/dust/cms/user/pooja/scratch/plot-macro/RecoilCorrector_v7/recoilfits/recoilfit_zmm53XRR_2012_njet.root");
+    corrector_->addDataFile("/nfs/dust/cms/user/pooja/scratch/plot-macro/RecoilCorrector_v7/recoilfits/recoilfit_datamm53XRR_2012_njet.root");
   }
   else{
     corrector_ = 0;
