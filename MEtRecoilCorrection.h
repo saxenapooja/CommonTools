@@ -58,9 +58,9 @@ TLorentzVector MEtRecoilCorrection::RecoilCorrectedMET(TLorentzVector pfMet_, Lo
 
     // loop over allgenparticles
     vector<GenParticle> daughters;
-    for(unsigned int i = 0 ; i < nGenParticle_ ; i++)
+    for(unsigned int i = 0 ; i < NumAllGenParticles() ; i++)
       {
-	GenParticle Gen = nGenParticle_(i);
+	GenParticle Gen = AllGenParticles(i);
 	if(Gen.Status() != 3) continue;
 	if(TMath::Abs(Gen.PDGId()) == 23){
 	  genVP4_ = Gen.P4();
