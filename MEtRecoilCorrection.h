@@ -56,8 +56,7 @@ TLorentzVector MEtRecoilCorrection::RecoilCorrectedMET(TLorentzVector pfMet_, Lo
   vector<GenParticle> daughters;
   
   // case -I   
-  if( boson.PDGId() == 23 || boson.PDGId() == 25 || 
-      boson.PDGId()) == 35 || TMath::Abs(boson.PDGId()) == 36 ) { 
+  if( boson.PDGId() == 23 || boson.PDGId() == 25 || boson.PDGId() == 35 || boson.PDGId() == 36 ) { 
     
     for(unsigned int i = 0; i < boson.NumDaughters(); ++i) {
       const GenParticle daughter = boson.GetDaughter(i);
