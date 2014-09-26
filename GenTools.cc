@@ -4,8 +4,7 @@
 namespace gen
 {
   
-  GenParticle GetStableParticle(const GenParticle& gen)
-  {
+  GenParticle GetStableParticle(const GenParticle& gen) {
     GenParticle Gen = gen;
     while(Gen.Status() != 1)
       {

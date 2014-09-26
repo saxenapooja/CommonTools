@@ -37,11 +37,11 @@ public:
 	const char* defaultAntiE, 
 	const char* defaultAntiMu);
 
-
+  
   TauWP(const Config& cfg, 
 	const char* prefix, 
 	const char* defaultIsolation);
-
+  
   const Isolation ISOLATION;
   const AntiE ANTIE;
   const AntiMu ANTIMU;
@@ -58,4 +58,4 @@ public:
   const char* antie_frfunc_name() const;
 };
 
-#endif // _WHANALYSIS_TAUWP_H_
+#endif 
