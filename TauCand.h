@@ -40,23 +40,42 @@ public:
 
   bool L1trigger_match;
   bool decayModeFinding;
-  bool byLooseCombinedIsolationDeltaBetaCorr;
+  bool decayModeFindingOldDMs;
+  bool decayModeFindingNewDMs;
+
   bool byLooseCombinedIsolationDeltaBetaCorr3Hits;
-  bool byMediumCombinedIsolationDeltaBetaCorr;
   bool byMediumCombinedIsolationDeltaBetaCorr3Hits;
-  bool byTightCombinedIsolationDeltaBetaCorr;
   bool byTightCombinedIsolationDeltaBetaCorr3Hits;
+  bool byLooseIsolationMVA3oldDMwLT;
+  bool byMediumIsolationMVA3oldDMwLT;
+  bool byTightIsolationMVA3oldDMwLT;
+  bool byVTightIsolationMVA3oldDMwLT;
+
+  /*
+  bool byLooseCombinedIsolationDeltaBetaCorr;
+  bool byMediumCombinedIsolationDeltaBetaCorr;
+  bool byTightCombinedIsolationDeltaBetaCorr;
+
+  bool againstElectronLooseMVA3;
+  bool againstElectronMediumMVA3;
+  bool againstElectronTightMVA3;
+  */
 
   bool againstElectronLoose;
-  bool againstElectronLooseMVA3;
   bool againstElectronMedium;
-  bool againstElectronMediumMVA3;
   bool againstElectronTight;
-  bool againstElectronTightMVA3;
+  bool againstElectronLooseMVA5;
+  bool againstElectronMediumMVA5;
+  bool againstElectronTightMVA5;
 
   bool againstMuonLoose;
   bool againstMuonMedium;
   bool againstMuonTight;
+  bool againstMuonLoose3;
+  bool againstMuonTight3;
+  bool againstMuonLooseMVA;
+  bool againstMuonMediumMVA;
+  bool againstMuonTightMVA;
 
   double corr;
   TLorentzVector p4;
