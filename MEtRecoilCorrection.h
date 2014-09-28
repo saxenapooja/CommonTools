@@ -57,7 +57,7 @@ TLorentzVector MEtRecoilCorrection::RecoilCorrectedMET(TLorentzVector pfMet_, Lo
   
   // case -I   
   if( boson.PDGId() == 23 || boson.PDGId() == 25 || boson.PDGId() == 35 || boson.PDGId() == 36 ) { 
-    
+    genVP4_ = boson.P4();    
     for(unsigned int i = 0; i < boson.NumDaughters(); ++i) {
       const GenParticle daughter = boson.GetDaughter(i);
       if(TMath::Abs(daughter.PDGId()) == 15){
@@ -117,7 +117,8 @@ TLorentzVector MEtRecoilCorrection::RecoilCorrectedMET(TLorentzVector pfMet_, Lo
   
 
   // case -II   
-if( TMath::Abs(boson.PDGId()) == 24) {
+  if( TMath::Abs(boson.PDGId()) == 24) {
+    genVP4_ = boson.P4();    
     for(unsigned int i = 0; i < boson.NumDaughters(); ++i) {
       const GenParticle daughter = boson.GetDaughter(i);
       if( ( TMath::Abs(daughter.PDGId()) == 11 || TMath::Abs(daughter.PDGId()) ==  13 || TMath::Abs(daughter.PDGId()) ==  15 ) && daughter.Status() == 1)
