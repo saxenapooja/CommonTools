@@ -1,25 +1,26 @@
+
 #ifndef _WHANALYSIS_MVATREE_H_
 #define _WHANALYSIS_MVATREE_H_
 
 #include "Common/FakeRateFunctions.h"
 #include "Common/TauCand.h"
+
 #include "AnalysisTool/Analyse.h"
+
 #include <TLorentzVector.h>
 #include <TTree.h>
 
 class MvaTree
 {
- public:
+public:
   MvaTree(const FakeRateFunctions& fr, const char* name, const char* desc);
-  
+
   class Variables
   {
   public:
-    Variables(const Muon& muon, const TauCand& OStau, const TauCand& SStau, const TLorentzVector& met, unsigned int njets30, int regions, bool case2); 
-    //bool lepton_fake, bool OStauJetFake, bool SStauJetFake, bool wjets_veto_mt, bool OStauTrackFake, bool SStauTrackFake);
-    Variables(const Electron& electron, const TauCand& OStau, const TauCand& SStau, const TLorentzVector& met, unsigned int njets30, int regions, bool case2); 
-    //bool lepton_fake, bool OStauJetFake, bool SStauJetFake, bool wjets_veto_mt, bool OStauTrackFake, bool SStauTrackFake);
-    
+    Variables(const Muon& muon, const TauCand& OStau, const TauCand& SStau, const TLorentzVector& met, unsigned int njets30, int regions, bool case2); //bool lepton_fake, bool OStauJetFake, bool SStauJetFake, bool wjets_veto_mt, bool OStauTrackFake, bool SStauTrackFake);
+    Variables(const Electron& electron, const TauCand& OStau, const TauCand& SStau, const TLorentzVector& met, unsigned int njets30, int regions, bool case2); //bool lepton_fake, bool OStauJetFake, bool SStauJetFake, bool wjets_veto_mt, bool OStauTrackFake, bool SStauTrackFake);
+
     struct MvaVars
     {
       float leadPt;
@@ -53,16 +54,16 @@ class MvaTree
       //float dzOSTau;
       //float dzSSTau;
     };
-    
-    /*    const bool leptonFake;
-	  const bool OSTauFake;
-	  const bool SSTauFake;
-	  const bool wJetsVetoMT;
-	  const bool OSTauTrackFake;
-	  const bool SSTauTrackFake;*/
-    /*    const int lepCharge;
-	  const int leadTauCharge;
-	  const int subTauCharge;*/
+
+/*    const bool leptonFake;
+    const bool OSTauFake;
+    const bool SSTauFake;
+    const bool wJetsVetoMT;
+    const bool OSTauTrackFake;
+    const bool SSTauTrackFake;*/
+/*    const int lepCharge;
+    const int leadTauCharge;
+    const int subTauCharge;*/
     int regions;
     bool case2;
     MvaVars mvaVars;
